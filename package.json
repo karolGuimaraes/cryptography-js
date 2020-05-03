@@ -1,0 +1,29 @@
+{
+  "name": "cryptography-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "form-data": "^3.0.0",
+    "fs": "0.0.1-security",
+    "js-sha1": "^0.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karolGuimaraes/cryptography-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karolGuimaraes/cryptography-js/issues"
+  },
+  "homepage": "https://github.com/karolGuimaraes/cryptography-js#readme"
+}
