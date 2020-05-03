@@ -16,9 +16,8 @@ exports.getEncrypted = async (req, res) => {
 	formData.append('answer', answer_file);
 	
 	const submit_response = await axios.post('https://api.codenation.dev/v1/challenge/dev-ps/submit-solution?token=d2be53b4cb4591f19ca1bf97dfc57a94b6079aee', formData, {
-		headers: {'Content-Type': 'multipart/form-data'},
+		headers: formData.getHeaders(),
 	});
-	console.log(submit_response)
 
 	res.send(submit_response.data);
 };
@@ -45,17 +44,3 @@ function decipherer(answer) {
 
 	return decifrado;
 }
-
-// async function submit_answer(){
-// 	const formData = new FormData();
-// 	const answer = fs.createReadStream('./answer.json');
-
-// 	formData.append('answer', answer);
-	
-// 	const response = await axios.post('https://api.codenation.dev/v1/challenge/dev-ps/submit-solution?token=d2be53b4cb4591f19ca1bf97dfc57a94b6079aee', formData, {
-// 		headers: {'Content-Type': 'multipart/form-data'},
-// 	});
-
-// 	console.log(response);
-// 	return response.data;
-// }
